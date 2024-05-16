@@ -27,16 +27,17 @@ body {
 
 body {
   height: 100vh;
-  background: url(./assets/images/WhereYourMoneyGoes-Desktop.png);
+  background: url(../assets/images/WhereYourMoneyGoes-Desktop.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   font-family: "FS Me", sans-serif;
   color: var(--text-black);
+  scroll-behavior: smooth;
 }
 
-.mobile-radient {
+.mobile-gradient {
   display: none;
 }
 
@@ -52,13 +53,13 @@ body {
 
 @media screen and (max-width: 620px) {
   body {
-    background-image: url(./assets/images/WhereYourMoneyGoes-Mobile.png);
+    background-image: url(../assets/images/WhereYourMoneyGoes-Mobile.png);
     background-position: top;
     position: relative;
     background-size: 100vw 55vh;
   }
 
-  .mobile-radient {
+  .mobile-gradient {
     display: block;
     position: fixed;
     left: 0;
@@ -66,7 +67,7 @@ body {
     height: 100vh;
     width: 100%;
     z-index: -1;
-    background: linear-gradient(transparent 10%, #d5995f 55%);
+    background: linear-gradient(transparent 30%, #d5995f 55%);
   }
 }
 
@@ -126,6 +127,7 @@ main {
   font-weight: 600;
   font-size: 16px;
   cursor: pointer;
+  transition: all 0.3s ease-in;
 }
 
 .btn-78p {
@@ -143,6 +145,7 @@ main {
   padding: 16px 32px;
   margin-top: 16px;
   position: relative;
+  transition: all 0.3s ease-out;
 }
 
 .details-card .details-title {
@@ -159,6 +162,7 @@ main {
   border-right: 25px solid transparent;
   position: absolute;
   top: -12px;
+  transition: all 0.3s ease-out;
 }
 
 .from-left {
@@ -220,7 +224,7 @@ main {
     height: unset;
     min-height: 100vh;
     padding-bottom: 2rem;
-    padding-top: 25%;
+    padding-top: 70px;
     overflow: auto;
     box-sizing: content-box;
   }
@@ -255,8 +259,50 @@ main {
 
 /* /* Mobile Height Considerations */
 
-@media screen and (max-height: 700px) {
+@media screen and (min-height: 500px) and (max-width: 620px) {
   main {
-    padding-top: 50%;
+    padding-top: 330px;
+  }
+}
+
+@media screen and (min-height: 545px) and (max-width: 620px) {
+  main {
+    padding-top: 320px;
+  }
+}
+
+@media screen and (min-height: 585px) and (max-width: 620px) {
+  main {
+    padding-top: 295px;
+  }
+}
+
+@media screen and (min-height: 605px) and (max-width: 620px) {
+  main {
+    padding-top: 280px;
+  }
+}
+
+@media screen and (min-height: 695px) and (max-width: 620px) {
+  main {
+    padding-top: 220px;
+  }
+}
+
+@media screen and (min-height: 765px) and (max-width: 620px) {
+  main {
+    padding-top: 185px;
+  }
+}
+
+@media screen and (min-height: 799px) and (max-width: 620px) {
+  main {
+    padding-top: 155px;
+  }
+}
+
+@media screen and (min-height: 825px) and (max-width: 620px) {
+  main {
+    padding-top: 145px;
   }
 }
