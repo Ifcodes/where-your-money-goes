@@ -1,0 +1,260 @@
+@font-face {
+  font-family: "FS Me";
+  src: url("https://res.cloudinary.com/tearfund/raw/upload/v1664533753/General/Fonts/FSMeWeb-Regular_rcfffc.woff2")
+    format("woff");
+}
+
+/* variables */
+
+:root {
+  --purple: #6f3f87;
+  --navy-blue: #173145;
+  --text-black: #333333;
+  --white: #ffffff;
+}
+/* Background style */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  background: url(./assets/images/WhereYourMoneyGoes-Desktop.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: "FS Me", sans-serif;
+  color: var(--text-black);
+}
+
+.mobile-radient {
+  display: none;
+}
+
+/* Tablet */
+
+@media screen and (max-width: 992px) {
+  body {
+    background-size: 1240px 100%;
+  }
+}
+
+/* mobile */
+
+@media screen and (max-width: 620px) {
+  body {
+    background-image: url(./assets/images/WhereYourMoneyGoes-Mobile.png);
+    background-position: top;
+    position: relative;
+    background-size: 100vw 55vh;
+  }
+
+  .mobile-radient {
+    display: block;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+    background: linear-gradient(transparent 10%, #d5995f 55%);
+  }
+}
+
+/* Card Styles */
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.card {
+  width: 574px;
+  min-height: 633px;
+  background-color: var(--white);
+  border-radius: 8px;
+  padding: 40px 64px;
+  margin-right: 40px;
+}
+
+.card-title {
+  font-size: 40px;
+  margin: 0;
+}
+
+.card-title::after {
+  content: "";
+  display: block;
+  width: 48px;
+  border: 2px solid #008caa;
+  margin-top: 16px;
+}
+
+.description,
+.sub-description,
+.details {
+  margin-top: 20px;
+  line-height: 32px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.button-group button {
+  width: 50%;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  padding: 16px;
+  color: var(--white);
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.btn-78p {
+  background-color: var(--purple);
+}
+
+.btn-22p {
+  background-color: var(--navy-blue);
+}
+
+.details-card {
+  width: 100%;
+  min-height: 196px;
+  border-radius: 8px;
+  padding: 16px 32px;
+  margin-top: 16px;
+  position: relative;
+}
+
+.details-card .details-title {
+  font-weight: 600;
+}
+
+.details-card .details-description {
+  font-weight: 500;
+}
+
+.from-left,
+.from-right {
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  position: absolute;
+  top: -12px;
+}
+
+.from-left {
+  left: 84px;
+  border-bottom: 25px solid var(--purple);
+}
+
+.from-right {
+  border-bottom: 25px solid var(--navy-blue);
+  right: 84px;
+}
+
+.purple {
+  background-color: var(--purple);
+  color: var(--white);
+}
+
+.navy {
+  background-color: var(--navy-blue);
+  color: var(--white);
+}
+
+.details-card .navy {
+  background-color: var(--navy);
+  color: var(--white);
+}
+
+.space {
+  display: none;
+}
+
+/* Tablet */
+
+@media screen and (max-width: 992px) {
+  .card {
+    width: 464px;
+    padding: 35px 37px;
+    margin-right: 15px;
+  }
+
+  .card-title {
+    font-size: 30px;
+  }
+
+  .details-card {
+    margin-top: 20px;
+  }
+}
+
+/* Mobile */
+
+@media screen and (max-width: 620px) {
+  main {
+    z-index: 1;
+    position: relative;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    height: unset;
+    min-height: 100vh;
+    padding-bottom: 2rem;
+    padding-top: 25%;
+    overflow: auto;
+    box-sizing: content-box;
+  }
+
+  .card {
+    margin-right: 0;
+    width: 90%;
+    display: block;
+    position: absolute;
+    padding: 32px 24px;
+  }
+
+  .card-title {
+    font-size: 32px;
+    width: 70%;
+  }
+
+  .details,
+  .description,
+  .sub-description {
+    line-height: 24px;
+  }
+
+  .from-left {
+    left: 40px;
+  }
+
+  .from-right {
+    right: 40px;
+  }
+}
+
+/* /* Mobile Height Considerations */
+
+@media screen and (max-height: 700px) {
+  main {
+    padding-top: 50%;
+  }
+}
