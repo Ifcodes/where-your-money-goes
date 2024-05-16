@@ -12,6 +12,7 @@
   --text-black: #333333;
   --white: #ffffff;
 }
+
 /* Background style */
 * {
   box-sizing: border-box;
@@ -39,7 +40,7 @@ body {
   display: none;
 }
 
-/* Tablet */
+/* Background style Tablet */
 
 @media screen and (max-width: 992px) {
   body {
@@ -47,7 +48,7 @@ body {
   }
 }
 
-/* mobile */
+/* Background style mobile */
 
 @media screen and (max-width: 620px) {
   body {
@@ -124,6 +125,7 @@ main {
   color: var(--white);
   font-weight: 600;
   font-size: 16px;
+  cursor: pointer;
 }
 
 .btn-78p {
@@ -188,7 +190,7 @@ main {
   display: none;
 }
 
-/* Tablet */
+/* Card style Tablet */
 
 @media screen and (max-width: 992px) {
   .card {
@@ -206,7 +208,7 @@ main {
   }
 }
 
-/* Mobile */
+/* Card style Mobile */
 
 @media screen and (max-width: 620px) {
   main {
